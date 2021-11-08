@@ -1,0 +1,115 @@
+<div class="animate__animated animate__backInRight animate__slow">
+
+    <div *ngIf="pais">
+
+        <div class="row container">
+            <div class="col-12 text-center">
+                <h2> {{ pais.translations.spa.common }} </h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row container">
+            
+            <div class="col-5 text-center mt-2">
+                <h3>Bandera</h3>
+                <hr>
+                <div class="mt-4">
+                    <img [src]="pais.flags.svg" class="img-thumbnail"/>
+                </div>
+            </div>
+
+            <div class="col text-center mt-2">
+                <h3>Información</h3>
+                <hr>
+                <div class="mt-4">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-action">
+                            <strong> Capital: </strong> {{ pais.capital}}.
+                        </li>
+                        <li class="list-group-item list-group-action">
+                            <strong> Región: </strong> {{ pais.region }}.
+                        </li>
+                        <li class="list-group-item list-group-action">
+                            <strong> Subregión: </strong> {{ pais.subregion }}.
+                        </li>
+                        <li class="list-group-item list-group-action">
+                            <strong> Superficie: </strong> {{ pais.area | number}} km².
+                        </li>
+                        <li class="list-group-item list-group-action">
+                            <strong> Población: </strong> {{ pais.population | number }} M.
+                        </li>
+                        <li class="list-group-item list-group-action">
+                            <strong> Lenguaje: </strong> {{ lenguaje }}
+                        </li>
+                        <li class="list-group-item list-group-action">
+                            <strong> Moneda: </strong> {{ moneda | titlecase }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row container" style="margin-top: 33px;">
+        
+            <hr>
+
+            <div 
+                *ngIf="pais.coatOfArms.svg" 
+                class="col-5 text-center mt-2"
+            >
+                <h3>Escudo de Armas </h3>
+                <hr>
+                <div class="mt-4">
+                    <img
+                        [src]="pais.coatOfArms.svg" 
+                        [class.img-thumbnail]="pais.coatOfArms.svg"
+                        id="img-escudo-armas"
+                    />
+                </div>
+            </div>
+
+            <div class="col text-center mt-2">
+                <h3>Mapa territorial</h3>
+                <hr>
+                <div class="mt-4">
+                    <ul class="list-group">
+                        <a 
+                            class="list-group-item list-group-action"
+                            [href]= "pais.maps.googleMaps"
+                            target="_blank"
+                            id="anchor-mapa"
+                        >
+                            <img 
+                                src="../../../assets/img/mapaMundial.png"
+                                class="img-thumbnail"
+                            />
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row container" style="margin-top: 33px; margin-bottom: 50px;">
+            <hr>
+            <h3>Traducciones</h3>
+
+            <div class="col mt-2">
+                
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.spa.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.jpn.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.urd.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.rus.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.por.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.fra.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.ita.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.hun.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.fin.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.nld.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.deu.common }}</span>
+                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.urd.common }}</span>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+
+    background-color: rgb(190, 255, 229);
+}
+
+ul.list-group li.active {
+    background-color:#ced4da;
+}
+
+#li-sidebar{
+
+    border-width: 1px;
+    border-color: #ced4da;
+    border-radius: 20px;
+    max-width: 200px;
+    color: rgb(19, 18, 18);
+}
+
+#input {
+
+    border-radius: 20px;
+    max-width: 300px;
+    border-color: #ced4da;
+    margin-top: 5px;
+    margin-left: 31px;
+}
+
+#input:focus{
+    
+    box-shadow: 0 0 0 4px #ced4da;
+}
+
+#alert {
+
+    border-radius: 25px;
+    max-width:max-content;
+}
+
+.small-flag{
+
+    max-width: 60px;
+}
+
+#anchor-ver {
+
+    color: rgb(19, 18, 18);
+}
+
+#btnBorrar{
+
+    max-width: 200px;
+    border-radius: 20px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#img-escudo-armas {
+
+    max-width: 180px;
+    border-color: #ced4da;
+}
+
+#anchor-mapa {
+
+    background-color:transparent;
+    border: none;
+}
+
+#badge {
+
+    border-radius: 20px;
+}

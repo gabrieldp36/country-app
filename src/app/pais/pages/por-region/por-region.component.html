@@ -1,0 +1,49 @@
+<div class="animate__animated animate__fadeIn animate__slow">
+
+    <h2 
+        style="display: inline;"
+    > 
+        Por región: 
+            <h2 
+                *ngIf="regionActiva"
+                style="display: inline;"
+                class="animate__animated animate__fadeIn"
+            >  {{regionActiva}} 
+            </h2> 
+        </h2>
+    <hr>
+
+    <div class="row container text-center align-items-center justify-content-center">
+
+        <div class="col container">
+
+            <button
+                *ngFor="let region of regiones"
+                [class]="fijarClaseCCS(region.nombre)"
+                class="mt-1 mb-3"
+                (click)="buscarPorRegion(region.nombre, region.termino)"
+            >
+                {{region.nombre}}
+            </button>
+        </div>
+    </div>
+
+    <div class="animate__animated animate__fadeIn animate__slow">
+        <div 
+            *ngIf="error"
+            class="alert alert-danger mt-4 animate__animated animate__flipInX animate__fast" 
+            id="alert"
+        >
+            No se han hallado resultados de búsqueda. 
+        </div>
+
+        <div 
+            *ngIf="paises.length > 0"
+            class="row mt-4 animate__animated animate__fadeIn animate">
+            <div >
+                <app-pais-table [paises] = "paises"></app-pais-table>
+            </div>
+        </div>
+    </div>
+
+</div>

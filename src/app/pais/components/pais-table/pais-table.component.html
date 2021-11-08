@@ -1,0 +1,38 @@
+<table class="table table-hover text-center" style="margin-bottom: 55px;">
+
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Bandera</th>
+            <th>Nombre</th>
+            <th>Capital</th>
+            <th>Región</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr
+            *ngFor="let pais of paises; let i = index"
+            class="animate__animated animate__fadeIn animate__slow">
+            <td> {{ i + 1 | number}} </td>
+            <td>
+                <img
+                    [src]="pais.flags.svg"
+                    class="img-thumbnail small-flag"
+                >
+            </td>
+            <td> {{pais.translations.spa.common}} </td>
+            <td> {{pais.capital}} </td>
+            <td> {{pais.region}} </td>
+            <td class="text-right"> <a 
+                    [routerLink]="['/pais', pais.cca2]"
+                    id="anchor-ver"
+                >
+                    Ver...
+                </a>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>

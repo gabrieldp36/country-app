@@ -1,0 +1,45 @@
+<ul class="list-group list-reset">
+
+    <li 
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="list-group-item list-group-action mt-2"
+        id="li-sidebar"
+    > 
+        Por nombre 
+    </li>
+
+    <li 
+        routerLink="capital"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="list-group-item list-group-action mt-2"
+        id="li-sidebar"
+    >
+        Por capital 
+    </li> 
+
+    <li 
+        routerLink="region"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="list-group-item list-group-action mt-2"
+        id="li-sidebar"
+    > 
+        Por región 
+    </li>
+
+</ul>
+
+<div class="d-grid gap-2 mt-4">
+    
+    <button
+        class="btn btn-danger btn-sm" 
+        id="btnBorrar"
+        (click)="borrar()"
+    >
+      Borrar resultados
+    </button>
+    
+</div>

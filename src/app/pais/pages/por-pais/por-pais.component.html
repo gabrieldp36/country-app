@@ -1,0 +1,53 @@
+<div class="animate__animated animate__fadeIn animate__slow">
+
+    <h2>Por nombre</h2>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <app-pais-input
+                (onEnter)= "buscar($event)"
+                (onDebounce)="sugerenciasBusqueda($event)"
+                (onSugerenciasOff)="sugerenciasOff()"
+                placeholder = "Buscar país..."
+            ></app-pais-input>
+        </div>
+    </div>
+
+    <ul
+        *ngIf="mostrarSugerencias"
+        class="list group"
+        style="margin-top: 3px;">
+        <a
+            *ngFor="let pais of paisesSugeridos"
+            class="list-group-item list-group-item-action nav-link text-dark"
+            [routerLink]="['/pais', pais.cca2]"
+        >
+            {{pais.translations.spa.common}}
+        </a>
+       
+        <a
+            *ngIf="paisesSugeridos.length > 0"
+            class="list-group-item list-group-item-action nav-link text-dark"
+            (click)="buscarSugeridos(termino)"
+        >
+            Buscar: "{{termino}}"
+        </a>
+    </ul>
+
+    <div 
+        *ngIf="error"
+        class="alert alert-danger mt-4 animate__animated animate__flipInX animate__fast" 
+        id="alert"
+    >
+        No se han hallado resultados con el término de búsqueda: <strong> {{termino}} </strong>
+    </div>
+
+    <div 
+        *ngIf="paises.length > 0"
+        class="row mt-4 animate__animated animate__fadeIn animate">
+        <div >
+            <app-pais-table [paises] = "paises"></app-pais-table>
+        </div>
+    </div>
+    
+</div>
