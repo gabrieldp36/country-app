@@ -361,3 +361,9 @@ export interface Region {
     nombre: string;
     termino: string;
 };
+
+export interface Traducciones {
+
+    official: string,
+    common: string
+};

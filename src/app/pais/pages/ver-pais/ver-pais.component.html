@@ -96,20 +96,16 @@
 
             <div class="col mt-2">
                 
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.spa.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.jpn.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.urd.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.rus.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.por.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.fra.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.ita.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.hun.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.fin.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.nld.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.deu.common }}</span>
-                <span class="badge bg-secondary mt-2 me-2" id="badge">{{ pais.translations.urd.common }}</span>
+                <span
+                    *ngFor="let traducciones of nombresTraducidos"
+                    class="badge bg-secondary mt-2 me-2" 
+                    id="badge"
 
+                >   {{ traducciones }}
+                </span>
             </div>
         </div>
+
     </div>
+
 </div>

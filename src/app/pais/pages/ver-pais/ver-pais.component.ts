@@ -6,7 +6,7 @@ import { switchMap } from 'rxjs/operators';
 
 import { PaisService } from '../../services/pais.service';
 
-import { Country, Moneda } from '../../interfaces/pais.interface';
+import { Country, Moneda, Traducciones } from '../../interfaces/pais.interface';
 
 @Component({
   selector: 'app-ver-pais',
@@ -28,6 +28,8 @@ export class VerPaisComponent implements OnInit {
   public moneda: string = '';
 
   public lenguaje: string = '';
+
+  public nombresTraducidos: string[] = [];
 
   constructor(
 
@@ -89,6 +91,18 @@ export class VerPaisComponent implements OnInit {
 
             this.lenguaje += `${idioma}.`;
           };
+        });
+      };
+
+      // Extraemos la traducción del nombre del país.
+
+      if (this.pais.translations) {
+
+        const traduccionesArr: Traducciones[] = Object.values(this.pais.translations).splice(0,12);
+
+        traduccionesArr.forEach ( traduccion => {
+          
+          this.nombresTraducidos.push(traduccion.common);
         });
       };
     });
