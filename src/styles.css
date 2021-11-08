@@ -1,6 +1,6 @@
 html, body {
 
-    background-color: rgb(190, 255, 229);
+    background: linear-gradient(600deg, #f4f5f5, #ffffff);
 }
 
 ul.list-group li.active {
@@ -69,4 +69,5 @@ ul.list-group li.active {
 #badge {
 
     border-radius: 20px;
+
 }

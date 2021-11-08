@@ -16,13 +16,13 @@ import { Country, Moneda, Traducciones } from '../../interfaces/pais.interface';
     `
       li {
 
-        background-color:#deb887;
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        background-color: #e7c89f;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
       }
  
       img {
 
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
       }
     `
   ]
