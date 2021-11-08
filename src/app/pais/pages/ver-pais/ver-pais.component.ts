@@ -12,10 +12,16 @@ import { Country, Moneda, Traducciones } from '../../interfaces/pais.interface';
   selector: 'app-ver-pais',
   templateUrl: './ver-pais.component.html',
   styles: [
+    
     `
       li {
 
         background-color:#deb887;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      }
+ 
+      img {
+
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
       }
     `
