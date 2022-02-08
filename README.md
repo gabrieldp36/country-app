@@ -1,27 +1,33 @@
-# PaisesApp
+# Países App.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
+Esta aplicación permite realizar búsquedas de países, indicando el nombre del mismo, su capital o el continente donde se encuentra situado el mismo.
 
-## Development server
+Las búsquedas arrojan sugerencias en tiempo real al usuario a fin de simplificar las mismas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Una vez seleccionado el país, se puede visualizar su bandera, escudo de armas y cierta información adicional tal como la capital, región, subregión, población, lenguaje y moneda.
 
-## Code scaffolding
+Asimismo, se puede analizar el mapa territorial de cada país, para ello se interconecta la aplicación con el servicio de Google Maps.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Pueden visitar la App haciendo click en este link: https://busqueda-paises-app.herokuapp.com/
 
-## Build
+### Notas:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este proyecto fue generado con [Angular CLI] versión 12.2.9.
 
-## Running unit tests
+Recuerden reconstruir los módulos de Node:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm install
+```
 
-## Running end-to-end tests
+Y luego, para probar la app en desarrollo, ejecuten el siguiente comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+ng serve -o
+```
 
-## Further help
+Para construir el build, recuerden:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+ng build --configuration=production
+```
