@@ -1,9 +1,13 @@
 html, body {
 
-    background: linear-gradient(600deg, #f4f5f5, #ffffff);
+    background: linear-gradient(90deg, #ffffff 11%, #dbdfe2 100%);
 }
 
 ul.list-group li.active {
+    background-color:#ced4da;
+}
+
+ul.list-group li:hover {
     background-color:#ced4da;
 }
 
@@ -27,7 +31,7 @@ ul.list-group li.active {
 
 #input:focus{
     
-    box-shadow: 0 0 0 4px #ced4da;
+    box-shadow: 0 0 0 3px #ced4da;
 }
 
 #alert {
