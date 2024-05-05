@@ -1,6 +1,53 @@
 html, body {
-
     background: linear-gradient(90deg, #ffffff 11%, #dbdfe2 100%);
+}
+
+*::-webkit-scrollbar {
+    width: 14px;
+    height: 10px;
+    background: #c7c7c7;
+}
+  
+*::-webkit-scrollbar-track:hover {
+    background: #c1c5c9;
+}
+
+*::-webkit-scrollbar-track:active {
+    background: #c1c5c9;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #8b9096;
+    border: .3rem solid #8b9096;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #495057;
+    border-color: #495057;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media(max-width: 991px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
 ul.list-group li.active {
@@ -21,7 +68,6 @@ ul.list-group li:hover {
 }
 
 #input {
-
     border-radius: 20px;
     max-width: 300px;
     border-color: #ced4da;
@@ -30,48 +76,49 @@ ul.list-group li:hover {
 }
 
 #input:focus{
-    
     box-shadow: 0 0 0 3px #ced4da;
 }
 
 #alert {
-
     border-radius: 25px;
     max-width:max-content;
 }
 
 .small-flag{
-
     max-width: 60px;
 }
 
 #anchor-ver {
-
     color: rgb(19, 18, 18);
 }
 
 #btnBorrar{
-
     max-width: 200px;
     border-radius: 20px;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-#img-escudo-armas {
+.separacion-ver-pais {
+    margin-bottom: 0;
+}
 
+@media(max-width: 991px) {
+    .separacion-ver-pais {
+        margin-bottom: 30px;
+    }
+}
+
+#img-escudo-armas {
     max-width: 180px;
     border-color: #ced4da;
 }
 
 #anchor-mapa {
-
     background-color:transparent;
     border: none;
 }
 
 #badge {
-
     border-radius: 20px;
-
 }

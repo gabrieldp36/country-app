@@ -2,16 +2,16 @@
 
     <div *ngIf="pais">
 
-        <div class="row container">
+        <div class="row ">
             <div class="col-12 text-center">
                 <h2> {{ pais.translations.spa.common }} </h2>
                 <hr>
             </div>
         </div>
 
-        <div class="row container">
+        <div class="row">
             
-            <div class="col-5 text-center mt-2">
+            <div class="col-lg-5 col-md-5 col-sm-12 text-center mt-2 separacion-ver-pais">
                 <h3>Bandera</h3>
                 <hr>
                 <div class="mt-4">
@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div class="col text-center mt-2">
+            <div class="col-lg-7 col-md-7 col-sm-12 text-center mt-2 separacion-ver-pais">
                 <h3>Información</h3>
                 <hr>
                 <div class="mt-4">
@@ -50,13 +50,13 @@
             </div>
         </div>
 
-        <div class="row container" style="margin-top: 33px;">
+        <div class="row" style="margin-top: 33px;">
         
             <hr>
 
             <div 
                 *ngIf="pais.coatOfArms.svg" 
-                class="col-5 text-center mt-2"
+                class="col-lg-5 col-md-5 col-sm-12 text-center mt-2 separacion-ver-pais"
             >
                 <h3>Escudo de Armas </h3>
                 <hr>
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="col text-center mt-2">
+            <div class="col-lg-7 col-md-7 col-sm-12 text-center mt-2 separacion-ver-pais">
                 <h3>Mapa territorial</h3>
                 <hr>
                 <div class="mt-4">
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="row container" style="margin-top: 33px; margin-bottom: 50px;">
+        <div class="row" style="margin-top: 33px; margin-bottom: 50px;">
             <hr>
             <h3>Traducciones</h3>
 
